@@ -9,7 +9,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @user = current_user
     @book = Book.new
+    @books = @user.books
+  end
 
   def edit
     @user = User.find(params[:id])
@@ -34,4 +37,5 @@ class UsersController < ApplicationController
       redirect_to user_path(current_user)
     end
   end
+  
 end
