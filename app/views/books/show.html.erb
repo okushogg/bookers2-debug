@@ -2,16 +2,16 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-xs-3">
 			<!--Userプロフィール-->
 			<%= render 'users/profile', user: current_user %>
 			<!--Userプロフィール-->
 			<%= render 'books/form', book: @book %>
 		</div>
 	
-		<div class="col-md-8">
+		<div class="col-xs-9">
 			<h2>Book detail</h2>
-			<!--ユーザーが投稿したbook詳細-->
+			<!--ユーザーが投稿したbook-->
 			<%= render 'books/book_detail', book: @book_detail, user: @user %>
 		</div>
 	</div>
