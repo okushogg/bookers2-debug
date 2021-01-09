@@ -11,7 +11,7 @@ default: &default
 
 development:
   <<: *default
-  production:
+production:
   <<: *default
   database: <%= ENV['bookers2-debug'] %>
   adapter: mysql2
@@ -30,6 +30,6 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
-  <<: *default
-  database: db/production.sqlite3
+# production:
+  # <<: *default
+  # database: db/production.sqlite3
